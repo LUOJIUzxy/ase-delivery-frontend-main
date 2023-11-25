@@ -1,0 +1,8 @@
+const XSRF_TOKEN = {
+    AUTH: "AUTH-XSRF-TOKEN",
+    DELIVERY: "DELIVERY-XSRF-TOKEN"
+};
+
+export {
+    XSRF_TOKEN
+}

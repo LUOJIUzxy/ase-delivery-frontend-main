@@ -1,0 +1,18 @@
+version: '3.7'
+services:
+  ui-service:
+    build:
+      context: ./
+      dockerfile: Dockerfile.dev
+    container_name: "ui-service"
+    image: aseteam13/ui-service-dev
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    networks:
+      - proxy-net
+
+networks:
+  proxy-net:
+    external:
+      name: ase-delivery
